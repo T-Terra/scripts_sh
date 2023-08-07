@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-    echo "Mode de uso: $0 <bucket>"
+    echo "Modo de uso: $0 <bucket>"
 else
     for path in $(cat path); do
         aws s3 cp s3://$1/$path ./s3_files/ 1> /dev/null
